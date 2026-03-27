@@ -1,11 +1,11 @@
-# Tech-Horizon Frontend - Quick Start Guide
+# शक्ति Link Frontend - Quick Start Guide
 
 ## Installation & Setup
 
 ### Prerequisites
 - Node.js 16+ installed
 - npm or yarn package manager
-- Tech-Horizon backend running on `http://localhost:8080`
+- शक्ति Link backend running on `http://localhost:8080`
 
 ### Step 1: Install Dependencies
 ```bash

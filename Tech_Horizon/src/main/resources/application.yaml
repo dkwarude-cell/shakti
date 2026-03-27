@@ -1,25 +1,36 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/Tech_Horizon
-    username: postgres
-    password: '0000'
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/Tech_Horizon}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:0000}
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      # Local: create-drop (recreates DB on startup)
+      # Production: validate (checks schema without modifying)
+      ddl-auto: ${JPA_DDL_AUTO:create-drop}
 
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-    show-sql: true
+    show-sql: ${SHOW_SQL:false}
     format_sql: true
 
   security:
-    SECRET_KEY: "N7yOceDXKfUAFbUIl2TUqLh1hBs1o+uShl5wfvXIhjE="
-    EXPIRATION: 3600000
+    SECRET_KEY: ${JWT_SECRET:N7yOceDXKfUAFbUIl2TUqLh1hBs1o+uShl5wfvXIhjE=}
+    EXPIRATION: ${JWT_EXPIRATION:3600000}
 
   mail:
-    username: arogyavani243@gmail.com
-    password: "rgdu vmzn sqzt ukpq"
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:arogyavani243@gmail.com}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true

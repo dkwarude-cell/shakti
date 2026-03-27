@@ -155,7 +155,7 @@ export default function LoginPage() {
 
           {/* Feature Highlight */}
           <Card className="bg-gradient-to-r from-secondary to-yellow-600 text-primary p-8">
-            <h3 className="text-3xl font-bold mb-4">Why Tech-Horizon?</h3>
+            <h3 className="text-3xl font-bold mb-4">Why शक्ति Link?</h3>
             <ul className="space-y-3 text-lg font-semibold">
               <li>✓ Fraud-free donation system with full transparency</li>
               <li>✓ Real-time tracking of donations and requirements</li>

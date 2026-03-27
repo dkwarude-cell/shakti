@@ -1,7 +1,7 @@
 {
   "name": "tech-horizon-frontend",
   "version": "1.0.0",
-  "description": "Frontend for Tech-Horizon donation and supply management system",
+  "description": "Frontend for शक्ति Link donation and supply management system",
   "type": "module",
   "private": true,
   "dependencies": {

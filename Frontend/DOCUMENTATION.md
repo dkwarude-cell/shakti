@@ -1,8 +1,8 @@
-# Tech-Horizon Frontend - Complete Documentation
+# शक्ति Link Frontend - Complete Documentation
 
 ## Overview
 
-This is a comprehensive React-based frontend for the Tech-Horizon donation and supply management system. It provides role-based interfaces for three user types: Donors, Institutes, and Suppliers.
+This is a comprehensive React-based frontend for the शक्ति Link donation and supply management system. It provides role-based interfaces for three user types: Donors, Institutes, and Suppliers.
 
 ## Technology Stack
 

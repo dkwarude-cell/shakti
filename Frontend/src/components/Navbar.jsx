@@ -12,13 +12,13 @@ export default function Navbar() {
 
   const menuItems = [
     { label: 'HOME', link: '/' },
-    { label: 'HOW IT WORKS', link: '/' },
-    { label: 'RAISE REQUEST', link: '/' },
-    { label: 'DONATE', link: '/' },
-    { label: 'TRACK DONATIONS', link: '/' },
-    { label: 'SHOPS', link: '/' },
-    { label: 'REVIEWS', link: '/' },
-    { label: 'CONTACT', link: '/' },
+    { label: 'HOW IT WORKS', link: '/how-it-works' },
+    { label: 'RAISE REQUEST', link: '/raise-request' },
+    { label: 'DONATE', link: '/donate' },
+    { label: 'TRACK DONATIONS', link: '/track-donations' },
+    { label: 'SHOPS', link: '/shops' },
+    { label: 'REVIEWS', link: '/reviews' },
+    { label: 'CONTACT', link: '/contact' },
   ];
 
   return (
@@ -34,13 +34,13 @@ export default function Navbar() {
           {/* Menu Items */}
           <div className="hidden md:flex gap-6 items-center">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.link}
+                to={item.link}
                 className="text-white font-bold text-xs hover:text-secondary transition duration-300"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 

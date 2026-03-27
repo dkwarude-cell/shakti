@@ -1,6 +1,6 @@
-# Tech-Horizon Frontend
+# शक्ति Link Frontend
 
-A modern React application for the Tech-Horizon donation and supply management platform.
+A modern React application for the शक्ति Link donation and supply management platform.
 
 ## Features
 
@@ -83,7 +83,7 @@ src/
 
 ## API Integration
 
-The application connects to the Tech-Horizon backend API. Ensure the backend is running on `http://localhost:8080` or update the API URL in `.env`.
+The application connects to the शक्ति Link backend API. Ensure the backend is running on `http://localhost:8080` or update the API URL in `.env`.
 
 ### Endpoints Used
 

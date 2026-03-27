@@ -1,0 +1,66 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      # PRODUCTION: validate mode - checks schema but doesn't modify
+      # This prevents accidental data loss
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 20
+          fetch_size: 50
+        order_inserts: true
+        order_updates: true
+
+    # Disable logging in production for performance
+    show-sql: false
+    format_sql: false
+
+  security:
+    SECRET_KEY: ${JWT_SECRET}
+    EXPIRATION: ${JWT_EXPIRATION:3600000}
+
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+# Server configuration for production
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    min-response-size: 1024
+
+# Logging configuration
+logging:
+  level:
+    root: INFO
+    com.example.Tech_Horizon: INFO
+  file:
+    name: logs/application.log
+    max-size: 10MB
+    max-history: 10

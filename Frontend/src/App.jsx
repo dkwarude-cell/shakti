@@ -16,14 +16,31 @@ import DonorDashboard from './pages/Donor/DonorDashboard';
 import InstituteDashboard from './pages/Institute/InstituteDashboard';
 import SupplierDashboard from './pages/Supplier/SupplierDashboard';
 
+// Public Pages
+import Home from './pages/Home';
+import HowItWorks from './pages/HowItWorks';
+import RaiseRequest from './pages/RaiseRequest';
+import Donate from './pages/Donate';
+import TrackDonations from './pages/TrackDonations';
+import Shops from './pages/Shops';
+import Reviews from './pages/Reviews';
+import Contact from './pages/Contact';
+
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        {/* Auth Routes */}
-        <Route path="/" element={<Navigate to="/login" />} />
+        {/* Public Routes */}
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/raise-request" element={<RaiseRequest />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/track-donations" element={<TrackDonations />} />
+        <Route path="/shops" element={<Shops />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* Donor Routes */}
         <Route path="/auth/donor/signup" element={<DonorSignUp />} />
@@ -62,7 +79,7 @@ function App() {
         />
 
         {/* Catch All */}
-        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
