@@ -4,6 +4,10 @@
   "description": "Frontend for शक्ति Link donation and supply management system",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

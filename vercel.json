@@ -1,8 +1,4 @@
 {
-  "version": 2,
-  "projectSettings": {
-    "nodeVersion": "18.x"
-  },
   "buildCommand": "cd Frontend && npm install && npm run build",
   "outputDirectory": "Frontend/dist",
   "rewrites": [
