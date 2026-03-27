@@ -1,6 +1,7 @@
 {
   "buildCommand": "cd Frontend && npm install && npm run build",
   "outputDirectory": "Frontend/dist",
+  "public": "Frontend/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
@@ -15,7 +16,7 @@
       ]
     },
     {
-      "source": "/.*",
+      "source": "/:path*",
       "headers": [
         {
           "key": "X-Content-Type-Options",
